@@ -4,8 +4,17 @@
 using namespace std;
 
 class Ticket{
-  protected:
+    protected:
         float price;
         int ticketID;
+    public:
+        Ticket(float price, int ticketID);
+        //setters
+        void set_price(float _price);
+        void set_ticketID(int _ticketID);
+        //getters
+        virtual float calculatePrice();
+        virtual void getDetails();
         
-}
+};
+#endif
