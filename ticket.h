@@ -1,24 +1,24 @@
 #ifndef TICKET_H
 #define TICKET_H
 
-#include <string>
-
-class Ticket{
-    protected:
+class Ticket {
+protected:
     int ticketID;
-    float basePrice;
+    double basePrice;
 
-    public:
-    Ticket(int id, float price);
+public:
+    Ticket(int id, double price);
 
-    virtual float calculatePrice();
-    float calculatePrice(int extra); // ovverload
+    virtual double calculatePrice() const;
+    double calculatePrice(int extra) const; // overload
 
-    int getTicketID();
-    float getBasePrice();
+    int getTicketID() const;
+    double getBasePrice() const;
 
     void setTicketID(int id);
-    void setBasePrice(float price);
+    void setBasePrice(double price);
+
+    virtual ~Ticket();
 };
 
 #endif
