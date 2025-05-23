@@ -1,3 +1,4 @@
+#include <iostream>
 #using namespace std;
 #IFNDEF BUS_H
 #DEFINE BUS_H
