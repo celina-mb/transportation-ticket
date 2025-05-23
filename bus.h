@@ -1,10 +1,25 @@
-#include <iostream>
-#using namespace std;
-#IFNDEF BUS_H
-#DEFINE BUS_H
+#ifndef BUS_H
+#define BUS_H
 
-#include "Tickets.h"
-class Bus:public Tickets{
+#include <string>
+
+#include "ticket.h"
+
+class Bus:public ticket{
     private:
-        int numberOfStops;
-}
+    int numberOfStops;
+
+    public:
+    // Constructor
+    Bus(int id, int stops, float price);
+
+    float calculatePrice() override;
+
+    // getter
+    int getNumberOfStops();
+
+    //setter
+    void setNumberOfStops(int stops);
+};
+
+#endif
