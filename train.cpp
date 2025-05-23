@@ -3,13 +3,13 @@
 Train::Train(int id, double price, std::string tClass)
     : Ticket(id, price), travelClass(tClass) {}
 
-double Train::calculatePrice() const {
+double Train::calculatePrice() {
     if (travelClass == "executive")
         return basePrice * 1.3;
     return basePrice;
 }
 
-std::string Train::getTravelClass() const {
+std::string Train::getTravelClass() {
     return travelClass;
 }
 
