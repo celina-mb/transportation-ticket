@@ -13,7 +13,7 @@ public:
 
     double calculatePrice() const override;
 
-    std::string getTravelClass() const;
+    std::string getTravelClass();
     void setTravelClass(const std::string& tClass);
 };
 
