@@ -12,9 +12,9 @@ class Ticket{
         //setters
         void set_price(float _price);
         void set_ticketID(int _ticketID);
-        //getters
+
+        int get_ticketID();
         virtual float calculatePrice();
-        virtual void getDetails();
         
 };
 #endif
