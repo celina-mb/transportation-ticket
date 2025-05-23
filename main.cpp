@@ -8,8 +8,8 @@ using namespace std;
 int main() {
     // Crear tickets
     Ticket base(100, 10.0);
-    Bus bus(101, 10.0, 5);
-    Train train(102, 20.0, "executive");
+    BusTicket bus(101, 10.0, 5);
+    TrainTicket train(102, 20.0, "executive");
 
     // Modificar valores usando setters
     base.setBasePrice(12.5);
