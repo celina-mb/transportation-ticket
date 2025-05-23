@@ -1,27 +1,29 @@
-#include "ticket.h"
+#include "Ticket.h"
 
-Ticket::Ticket(int id, float price) : ticketID(id), basePrice(price){}
+Ticket::Ticket(int id, double price) : ticketID(id), basePrice(price) {}
 
-float Ticket::calculatePrice(){
+double Ticket::calculatePrice() const {
     return basePrice;
 }
 
-float Ticket::calculatePrice(int extra){
+double Ticket::calculatePrice(int extra) const {
     return basePrice + extra;
 }
 
-int Ticket::getTicketID(){
+int Ticket::getTicketID() const {
     return ticketID;
 }
 
-float Ticket::getBasePrice(){
+double Ticket::getBasePrice() const {
     return basePrice;
 }
 
-void Ticket::setTicketID(int id){
+void Ticket::setTicketID(int id) {
     ticketID = id;
 }
 
-void Ticket::setBasePrice(float price){
+void Ticket::setBasePrice(double price) {
     basePrice = price;
 }
+
+Ticket::~Ticket() {}
