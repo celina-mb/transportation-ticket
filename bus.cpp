@@ -1,15 +1,16 @@
-#include "bus.h"
+#include "Bus.h"
 
-Bus::Bus(int id, int stops, float price) : Ticket(id, price), numberOfStops(stops){}
+BusTicket::BusTicket(int id, double price, int stops)
+    : Ticket(id, price), numberOfStops(stops) {}
 
-float Bus::calculatePrice(){
+double BusTicket::calculatePrice() const {
     return basePrice + numberOfStops * 2;
 }
 
-int Bus::getNumberOfStops(){
+int BusTicket::getNumberOfStops() const {
     return numberOfStops;
 }
 
-void Bus::setNumberOfStops(int stops){
+void BusTicket::setNumberOfStops(int stops) {
     numberOfStops = stops;
 }
