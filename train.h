@@ -4,12 +4,12 @@
 #include "Ticket.h"
 #include <string>
 
-class TrainTicket : public Ticket {
+class Train : public Ticket {
 private:
     std::string travelClass;
 
 public:
-    TrainTicket(int id, double price, std::string tClass);
+    Train(int id, double price, std::string tClass);
 
     double calculatePrice() const override;
 
