@@ -1,20 +1,24 @@
 #ifndef TICKET_H
 #define TICKET_H
+
 #include <string>
-using namespace std;
 
 class Ticket{
     protected:
-        float basePrice;
-        int ticketID;
-    public:
-        Ticket(float basePrice, int ticketID);
-        //setters
-        void set_price(float _price);
-        void set_ticketID(int _ticketID);
+    int ticketID;
+    float basePrice;
 
-        int get_ticketID();
-        virtual float calculatePrice();
-        
+    public:
+    Ticket(int id, float price);
+
+    virtual float calculatePrice();
+    float calculatePrice(int extra); // ovverload
+
+    int getTicketID();
+    float getBasePrice();
+
+    void setTicketID(int id);
+    void setBasePrice(float price);
 };
+
 #endif
