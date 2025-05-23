@@ -1,5 +1,5 @@
-#ifndef TRAIN.H
-#define TRAIN.H
+#ifndef TRAIN_H
+#define TRAIN_H
 #include <iostream>
 #include <string>
 #include "ticket.h"
