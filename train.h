@@ -1,20 +1,21 @@
-#ifndef TRAIN.H
-#define TRAIN.H
+#ifndef TRAIN_H
+#define TRAIN_H
+
+#include "Ticket.h"
 #include <string>
-#include "ticket.h"
-using namespace std;
 
-
-class Train:public Ticket
-{
+class TrainTicket : public Ticket {
 private:
-    string travel_class;
-public:
-    Train(string travel_class, int ticketID, float price);
-    
-    void set_travel_class(string travel_class_);
+    std::string travelClass;
 
-    string get_travel_class();
+public:
+    TrainTicket(int id, double price, std::string tClass);
+
+    double calculatePrice() const override;
+
+    std::string getTravelClass() const;
+    void setTravelClass(const std::string& tClass);
 };
 
-#endif 
+#endif
+
