@@ -1,18 +1,20 @@
-#include "Train.h"
+#ifndef TRAIN_H
+#define TRAIN_H
 
-TrainTicket::TrainTicket(int id, double price, std::string tClass)
-    : Ticket(id, price), travelClass(tClass) {}
+#include "Ticket.h"
+#include <string>
 
-double TrainTicket::calculatePrice() const {
-    if (travelClass == "executive")
-        return basePrice * 1.3;
-    return basePrice;
-}
+class TrainTicket : public Ticket {
+private:
+    std::string travelClass;
 
-std::string TrainTicket::getTravelClass() const {
-    return travelClass;
-}
+public:
+    TrainTicket(int id, double price, std::string tClass);
 
-void TrainTicket::setTravelClass(const std::string& tClass) {
-    travelClass = tClass;
-}
+    double calculatePrice() const override;
+
+    std::string getTravelClass() const;
+    void setTravelClass(const std::string& tClass);
+};
+
+#endif
