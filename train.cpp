@@ -3,7 +3,7 @@
 Train::Train(int id, double price, std::string tClass)
     : Ticket(id, price), travelClass(tClass) {}
 
-double Train::calculatePrice() {
+float Train::calculatePrice() {
     if (travelClass == "executive")
         return basePrice * 1.3;
     return basePrice;
