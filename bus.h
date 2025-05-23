@@ -1,16 +1,19 @@
-#include "Bus.h"
+#ifndef BUS_H
+#define BUS_H
 
-BusTicket::BusTicket(int id, double price, int stops)
-    : Ticket(id, price), numberOfStops(stops) {}
+#include "Ticket.h"
 
-double BusTicket::calculatePrice() const {
-    return basePrice + numberOfStops * 2;
-}
+class BusTicket : public Ticket {
+private:
+    int numberOfStops;
 
-int BusTicket::getNumberOfStops() const {
-    return numberOfStops;
-}
+public:
+    BusTicket(int id, double price, int stops);
 
-void BusTicket::setNumberOfStops(int stops) {
-    numberOfStops = stops;
-}
+    double calculatePrice() const override;
+
+    int getNumberOfStops() const;
+    void setNumberOfStops(int stops);
+};
+
+#endif
