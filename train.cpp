@@ -1,12 +1,18 @@
 #include "Train.h"
 
-Train::Train(string travel_class, int ticketID, float basePrice): Ticket(ticketID,basePrice){   
-}
-    
-string Train::get_travel_class(){
-    return travel_class;
+TrainTicket::TrainTicket(int id, double price, std::string tClass)
+    : Ticket(id, price), travelClass(tClass) {}
+
+double TrainTicket::calculatePrice() const {
+    if (travelClass == "executive")
+        return basePrice * 1.3;
+    return basePrice;
 }
 
-void Train::set_travel_class(string travel_class_){
-    travel_class=travel_class_;
+std::string TrainTicket::getTravelClass() const {
+    return travelClass;
+}
+
+void TrainTicket::setTravelClass(const std::string& tClass) {
+    travelClass = tClass;
 }
