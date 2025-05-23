@@ -5,10 +5,10 @@ using namespace std;
 
 class Ticket{
     protected:
-        float price;
+        float basePrice;
         int ticketID;
     public:
-        Ticket(float price, int ticketID);
+        Ticket(float basePrice, int ticketID);
         //setters
         void set_price(float _price);
         void set_ticketID(int _ticketID);
