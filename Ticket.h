@@ -9,7 +9,7 @@ protected:
 public:
     Ticket(int id, double price);
 
-    virtual double calculatePrice() const;
+    virtual double calculatePrice() const = 0;
     double calculatePrice(int extra) const; // overload
 
     int getTicketID() const;
@@ -22,4 +22,3 @@ public:
 };
 
 #endif
-
