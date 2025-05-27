@@ -7,12 +7,10 @@ using namespace std;
 
 int main() {
     // Crear tickets
-    Ticket base(100, 10.0);
     BusTicket bus(101, 10.0, 5);
     TrainTicket train(102, 20.0, "executive");
 
     // Modificar valores usando setters
-    base.setBasePrice(12.5);
     bus.setNumberOfStops(3);
     std::string newClass = "standard";
     train.setTravelClass(&newClass);
@@ -20,10 +18,6 @@ int main() {
 
     // Mostrar información
     cout << fixed << setprecision(2);
-
-    cout << "--- BASE TICKET ---\n";
-    cout << "ID: " << base.getTicketID() << endl;
-    cout << "Final Price: $" << base.calculatePrice() << "\n\n";
 
     cout << "--- BUS TICKET ---\n";
     cout << "ID: " << bus.getTicketID() << endl;
