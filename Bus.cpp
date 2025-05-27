@@ -14,3 +14,4 @@ int BusTicket::getNumberOfStops() const {
 void BusTicket::setNumberOfStops(int stops) {
     numberOfStops = stops;
 }
+
