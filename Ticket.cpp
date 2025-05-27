@@ -27,3 +27,4 @@ void Ticket::setBasePrice(double price) {
 }
 
 Ticket::~Ticket() {}
+
