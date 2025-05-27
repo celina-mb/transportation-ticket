@@ -13,7 +13,6 @@ std::string TrainTicket::getTravelClass() const {
     return travelClass;
 }
 
-void TrainTicket::setTravelClass(const std::string& tClass) {
-    travelClass = tClass;
+void TrainTicket::setTravelClass(const std::string* tClass) {
+    travelClass = *tClass;
 }
-
