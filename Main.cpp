@@ -14,7 +14,9 @@ int main() {
     // Modificar valores usando setters
     base.setBasePrice(12.5);
     bus.setNumberOfStops(3);
-    train.setTravelClass("standard");
+    std::string newClass = "standard";
+    train.setTravelClass(&newClass);
+
 
     // Mostrar información
     cout << fixed << setprecision(2);
@@ -35,4 +37,3 @@ int main() {
 
     return 0;
 }
-
