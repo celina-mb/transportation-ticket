@@ -1,29 +1,18 @@
-#include "Ticket.h"
+#include "Train.h"
 
-Ticket::Ticket(int id, double price) : ticketID(id), basePrice(price) {}
+TrainTicket::TrainTicket(int id, double price, std::string tClass)
+    : Ticket(id, price), travelClass(tClass) {}
 
-double Ticket::calculatePrice() const {
+double TrainTicket::calculatePrice() const {
+    if (travelClass == "executive")
+        return basePrice * 1.3;
     return basePrice;
 }
 
-double Ticket::calculatePrice(int extra) const {
-    return basePrice + extra;
+std::string TrainTicket::getTravelClass() const {
+    return travelClass;
 }
 
-int Ticket::getTicketID() const {
-    return ticketID;
+void TrainTicket::setTravelClass(const std::string& tClass) {
+    travelClass = tClass;
 }
-
-double Ticket::getBasePrice() const {
-    return basePrice;
-}
-
-void Ticket::setTicketID(int id) {
-    ticketID = id;
-}
-
-void Ticket::setBasePrice(double price) {
-    basePrice = price;
-}
-
-Ticket::~Ticket() {}
